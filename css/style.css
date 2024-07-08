@@ -58,7 +58,13 @@ h1{
     text-align: left;
     padding-top: 20px;
 }
-
+p{
+    font-weight: 200;
+    font-size: 14px;
+}
+footer{
+    font-weight: 100;
+}
 
 /*CLASSES I ID'S*/
 
@@ -74,7 +80,14 @@ h1{
     font-weight: 400;
     font-size: 18px;
 }
-
+#error{
+    text-align: center;
+    color:#fd0c49;
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
 .logo {
     width: 200px;

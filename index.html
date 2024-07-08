@@ -18,27 +18,33 @@
     </header>
     <!---FORMULARIO-->
     <main>
-        <form action="#">
+        <div>
+            <p id="error"></p>
+        </div>
+        <form action="juego.html" id="formEntrada">
             <div class="itemform">
-                <label for="name">Introduce tu nick: </label>
+                <label for="nick">Introduce tu nick*</label>
                 <input type="text" name="nick" value="@" id="nicka" readonly>
-                <input type="text" name="nick" id="nick">
+                <input type="text" name="nick" id="nick" required minlength="2">
             </div>
             <div class="itemform">
-                <label for="email">Correo Electronico: </label>
-                <input type="email" id="nick" value="yo@iam.es">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" value="yo@iam.es">
             </div>
             <div class="itemform">
-                <label for="tamano">Tamaño del juego</label>
-                <select name="tamano" id="tamano">
-                    <option value="">--Elige un Tamaño--</option>
+                <label for="tamano">Tamaño del juego*</label>
+                <select name="tamano" id="tamano" required>
+                    <option value="0">--Por favor elige un tamaño--</option>
                     <option value="1">4x4</option>
                     <option value="2">5x5</option>
                     <option value="3">6x6</option>
                 </select>
             </div>
             <div class="itemform">
-                <input type="submit" value="Jugar">
+                <p>* Obligatorio</p>
+            </div>
+            <div class="itemform">
+                <input type="submit" value="JUGAR" id="jugar">
             </div>
         </form>
     </main>
