@@ -1,0 +1,82 @@
+body {
+    background-color: #f5f5f5;
+    font-family: 'Poppins',sans-serif;
+}
+header, footer{
+    text-align: center;
+    width: 300px;
+    margin: 30px auto 0px auto;
+}
+main{
+    width: 300px;
+    margin: 30px auto 0px auto;
+}
+input{
+    display: inline;
+    font-family: 'Poppins',sans-serif;
+    width: 236px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    border-radius: 0px 5px 5px 0px;
+    font-weight: 200;
+    font-size:18px;
+}
+input[type="email"]{
+    border: 1px solid #ced4da;
+    font-weight: 200;
+    font-size:18px;
+    border-radius: 5px;
+    width: 278px;
+}
+input[type="submit"]{
+    background-color: #3c5fd3;
+    color: #fff;
+    font-weight: 400;
+    border-radius: 5px;
+    width: 100%;
+}
+select{
+    font-family: 'Poppins',sans-serif;
+    width: 100%;
+    border: 1px solid rgb(32, 32, 148);
+    border-radius: 5px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    font-size: 18px;
+}
+label{
+    display: block;
+    margin-bottom: 10px;
+}
+h1{
+    color: #3c5fd3;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: left;
+    padding-top: 20px;
+}
+
+
+/*CLASSES I ID'S*/
+
+#nicka{
+    float: left;
+    font-family: 'Poppins',sans-serif;
+    text-align: center;
+    width: 20px;
+    background-color: #ced4da;
+    border: 1px solid #ced4da;
+    border-radius: 5px 0px 0px 5px;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+
+.logo {
+    width: 200px;
+    height: auto;
+}
