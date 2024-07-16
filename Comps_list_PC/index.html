@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Hardware PC</title>
+</head>
+<body>
+    <h1>Configura tu PC</h1>
+    <main>
+        <div class="grid-container">
+            <div class="left-column">
+                <h2>Componentes</h2>
+                <div class="component-section">
+                    <h3 class="component-title" onclick="toggleSection('cpu-section')">CPU</h3>
+                    <div class="component-options" id="cpu-section">
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="cpu1">
+                            <img src="img/i5_img.png" alt="Intel i5"  draggable="true" ondragstart="drag(event)" id="cpu1">
+                            <p>Intel i5</p>
+                        </div>
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="cpu2">
+                            <img src="img/Intel-i7-14700.webp" alt="Intel i7" draggable="true" ondragstart="drag(event)" id="cpu2">
+                            <p>Intel i7</p>
+                        </div>
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="cpu3">
+                            <img src="img/ryzen 5.webp" alt="AMD Ryzen 5" draggable="true" ondragstart="drag(event)" id="cpu3">
+                            <p>AMD Ryzen 5</p>
+                        </div>
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="cpu4">
+                            <img src="img/ryzen 7.webp" alt="AMD Ryzen 7" draggable="true" ondragstart="drag(event)" id="cpu4">
+                            <p>AMD Ryzen 7</p>
+                        </div>
+                    </div>
+                    <h3 class="component-title" onclick="toggleSection('placa-section')">Placa Base</h3>
+                    <div class="component-options" id="placa-section">
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="placa1">
+                            <img src="img/asus_rog_strix.webp" alt="Asus Rog Strix" draggable="true" ondragstart="drag(event)" id="placa1">
+                            <p>ASUS Rog Strix</p>
+                        </div>
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="placa2">
+                            <img src="img/placa_asus.webp" alt="ASUS Prime B760-PLUS" draggable="true" ondragstart="drag(event)" id="placa2">
+                            <p>ASUS Prime B760-PLUS D4</p>
+                        </div>
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="placa3">
+                            <img src="img/placa_msi.jpg" alt="MSI B760 GAMING PLUS WIFI" draggable="true" ondragstart="drag(event)" id="placa3">
+                            <p>MSI B760 GAMING PLUS WIFI</p>
+                        </div>
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="placa4">
+                            <img src="img/msi_mag.webp" alt="MSI MAG B650 TOMAHAWK WIFI" draggable="true" ondragstart="drag(event)" id="placa4">
+                            <p>MSI MAG B650 TOMAHAWK WIFI</p>
+                        </div>
+                    </div>
+                    <h3 class="component-title" onclick="toggleSection('ram-section')">RAM</h3>
+                    <div class="component-options" id="ram-section">
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="ram1">
+                            <img src="img/ram_16gb.webp" alt="RAM corsair 16GB" draggable="true" ondragstart="drag(event)" id="ram1">
+                            <p>Corsair Vengeance 16GB RGB Pro</p>
+                        </div>
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="ram2">
+                            <img src="img/ram_rgb_white.webp" alt="Corsair Vengeance 32GB RGB DDR5 6000MHz" draggable="true" ondragstart="drag(event)" id="ram2">
+                            <p>Corsair Vengeance 32GB RGB DDR5 6000MHz</p>
+                        </div>
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="ram3">
+                            <img src="img/ram_corsair_32.webp" alt="Ram Corsair Vengance" draggable="true" ondragstart="drag(event)" id="ram3">
+                            <p>Corsair Vengeance DDR5 6000MHz 32GB</p>
+                        </div>
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="ram4">
+                            <img src="img/ram_corsair_32.webp" alt="Corsair Vengeance DDR5 6400MHz 64GB 2x32GB CL32" draggable="true" ondragstart="drag(event)" id="ram4">
+                            <p>Corsair Vengeance DDR5 6400MHz 64GB</p>
+                        </div>
+                    </div>
+                    <h3 class="component-title" onclick="toggleSection('cooler-section')">Refrigeración</h3>
+                    <div class="component-options" id="cooler-section">
+                        <div class="component-option">
+                            <img src="path/to/intel-i5.jpg" alt="Intel i5">
+                            <p>Intel i5</p>
+                        </div>
+                        <div class="component-option">
+                            <img src="path/to/intel-i7.jpg" alt="Intel i7">
+                            <p>Intel i7</p>
+                        </div>
+                        <div class="component-option">
+                            <img src="path/to/amd-ryzen-5.jpg" alt="AMD Ryzen 5">
+                            <p>AMD Ryzen 5</p>
+                        </div>
+                        <div class="component-option">
+                            <img src="path/to/amd-ryzen-7.jpg" alt="AMD Ryzen 7">
+                            <p>AMD Ryzen 7</p>
+                        </div>
+                    </div>
+                    <h3 class="component-title" onclick="toggleSection('gpu-section')">GPU</h3>
+                    <div class="component-options" id="gpu-section">
+                        <div class="component-option">
+                            <img src="path/to/intel-i5.jpg" alt="Intel i5">
+                            <p>Intel i5</p>
+                        </div>
+                        <div class="component-option">
+                            <img src="path/to/intel-i7.jpg" alt="Intel i7">
+                            <p>Intel i7</p>
+                        </div>
+                        <div class="component-option">
+                            <img src="path/to/amd-ryzen-5.jpg" alt="AMD Ryzen 5">
+                            <p>AMD Ryzen 5</p>
+                        </div>
+                        <div class="component-option">
+                            <img src="path/to/amd-ryzen-7.jpg" alt="AMD Ryzen 7">
+                            <p>AMD Ryzen 7</p>
+                        </div>
+                    </div>
+                    <h3 class="component-title" onclick="toggleSection('caja-section')">Caja</h3>
+                    <div class="component-options" id="caja-section">
+                        <div class="component-option">
+                            <img src="path/to/intel-i5.jpg" alt="Intel i5">
+                            <p>Intel i5</p>
+                        </div>
+                        <div class="component-option">
+                            <img src="path/to/intel-i7.jpg" alt="Intel i7">
+                            <p>Intel i7</p>
+                        </div>
+                        <div class="component-option">
+                            <img src="path/to/amd-ryzen-5.jpg" alt="AMD Ryzen 5">
+                            <p>AMD Ryzen 5</p>
+                        </div>
+                        <div class="component-option">
+                            <img src="path/to/amd-ryzen-7.jpg" alt="AMD Ryzen 7">
+                            <p>AMD Ryzen 7</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-column">
+                <h2>Carrito</h2>
+                <div id="carrito" ondrop="drop(event)" ondragover="allowDrop(event)" class="cart"></div>
+            </div>
+            <div class="right-column">
+                <h2>Precio Total: </h2>
+            </div>
+        </div>
+    </main>
+    <script src="apps.js"></script>
+</body>
+</html>

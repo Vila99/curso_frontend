@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    height: 100vh;
+}
+
+.left-column {
+    grid-column: 1 / 2;
+    background-color: #f0f0f0;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.right-column {
+    grid-column: 2 / 3;
+    background-color: #e0e0e0;
+    padding: 20px;
+}
+
+.component-section {
+    margin-bottom: 20px;
+}
+
+.component-title {
+    cursor: pointer;
+    background-color: #ddd;
+    padding: 10px;
+    margin: 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.component-options {
+    display: none;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.component-option {
+    width: calc(25% - 10px);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.component-option img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.component-option p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.cart {
+    border: 2px dashed #ccc;
+    min-height: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+}
