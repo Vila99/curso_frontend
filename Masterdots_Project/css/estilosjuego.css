@@ -1,4 +1,3 @@
-
 /*Elementos generales*/
 body{
     background-color: #f5f5f5;
@@ -75,13 +74,18 @@ img{
     min-width: 75px;
     min-height: 75px;
     border-radius: 5px;
-    border: 1px solid #ced4da;
 }
 .item{
+    border-radius: 45px;
+    border: solid 10px #fff;
+    width: 35px;
+    height: 35px;
+}
+.rojo{
+    background-color: #fd0c49;
+}
+.verde{
     background-color: #7ac943;
-    border-radius: 5px;
-    width: 50px;
-    height: 50px;
 }
 #contenedorJuego{
     width: 500px;
