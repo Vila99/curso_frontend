@@ -13,121 +13,121 @@
     <h1>Configura tu PC</h1>
     <main>
         <div class="grid-container">
-            <div class="left-column">
+            <div class="left-column" id="compodiv">
                 <h2>Componentes</h2>
                 <div class="component-section">
                     <h3 class="component-title" onclick="toggleSection('cpu-section')">CPU</h3>
                     <div class="component-options" id="cpu-section">
-                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="cpu1">
-                            <img src="img/i5_img.png" alt="Intel i5"  draggable="true" ondragstart="drag(event)" id="cpu1">
-                            <p>Intel i5</p>
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="cpu1" data-category="cpu" data-price="200">
+                            <img src="img/i5_img.png" alt="Intel i5" draggable="true" ondragstart="drag(event)" id="cpu1">
+                            <p>Intel i5 - $200</p>
                         </div>
-                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="cpu2">
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="cpu2" data-category="cpu" data-price="300">
                             <img src="img/Intel-i7-14700.webp" alt="Intel i7" draggable="true" ondragstart="drag(event)" id="cpu2">
-                            <p>Intel i7</p>
+                            <p>Intel i7 - $300</p>
                         </div>
-                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="cpu3">
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="cpu3" data-category="cpu" data-price="250">
                             <img src="img/ryzen 5.webp" alt="AMD Ryzen 5" draggable="true" ondragstart="drag(event)" id="cpu3">
-                            <p>AMD Ryzen 5</p>
+                            <p>AMD Ryzen 5 - $250</p>
                         </div>
-                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="cpu4">
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="cpu4" data-category="cpu" data-price="350">
                             <img src="img/ryzen 7.webp" alt="AMD Ryzen 7" draggable="true" ondragstart="drag(event)" id="cpu4">
-                            <p>AMD Ryzen 7</p>
+                            <p>AMD Ryzen 7 - $350</p>
                         </div>
                     </div>
                     <h3 class="component-title" onclick="toggleSection('placa-section')">Placa Base</h3>
                     <div class="component-options" id="placa-section">
-                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="placa1">
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="placa1" data-category="placa" data-price="250">
                             <img src="img/asus_rog_strix.webp" alt="Asus Rog Strix" draggable="true" ondragstart="drag(event)" id="placa1">
-                            <p>ASUS Rog Strix</p>
+                            <p>ASUS Rog Strix - $250</p>
                         </div>
-                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="placa2">
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="placa2" data-category="placa" data-price="150">
                             <img src="img/placa_asus.webp" alt="ASUS Prime B760-PLUS" draggable="true" ondragstart="drag(event)" id="placa2">
-                            <p>ASUS Prime B760-PLUS D4</p>
+                            <p>ASUS Prime B760-PLUS D4 - $150</p>
                         </div>
-                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="placa3">
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="placa3" data-category="placa" data-price="200">
                             <img src="img/placa_msi.jpg" alt="MSI B760 GAMING PLUS WIFI" draggable="true" ondragstart="drag(event)" id="placa3">
-                            <p>MSI B760 GAMING PLUS WIFI</p>
+                            <p>MSI B760 GAMING PLUS WIFI - $200</p>
                         </div>
-                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="placa4">
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="placa4" data-category="placa" data-price="350">
                             <img src="img/msi_mag.webp" alt="MSI MAG B650 TOMAHAWK WIFI" draggable="true" ondragstart="drag(event)" id="placa4">
-                            <p>MSI MAG B650 TOMAHAWK WIFI</p>
+                            <p>MSI MAG B650 TOMAHAWK WIFI - $350</p>
                         </div>
                     </div>
                     <h3 class="component-title" onclick="toggleSection('ram-section')">RAM</h3>
                     <div class="component-options" id="ram-section">
-                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="ram1">
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="ram1" data-category="ram" data-price="70">
                             <img src="img/ram_16gb.webp" alt="RAM corsair 16GB" draggable="true" ondragstart="drag(event)" id="ram1">
-                            <p>Corsair Vengeance 16GB RGB Pro</p>
+                            <p>Corsair Vengeance 16GB RGB Pro - $70</p>
                         </div>
-                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="ram2">
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="ram2" data-category="ram" data-price="120">
                             <img src="img/ram_rgb_white.webp" alt="Corsair Vengeance 32GB RGB DDR5 6000MHz" draggable="true" ondragstart="drag(event)" id="ram2">
-                            <p>Corsair Vengeance 32GB RGB DDR5 6000MHz</p>
+                            <p>Corsair Vengeance 32GB RGB DDR5 6000MHz - $120</p>
                         </div>
-                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="ram3">
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="ram3" data-category="ram" data-price="180">
                             <img src="img/ram_corsair_32.webp" alt="Ram Corsair Vengance" draggable="true" ondragstart="drag(event)" id="ram3">
-                            <p>Corsair Vengeance DDR5 6000MHz 32GB</p>
+                            <p>Corsair Vengeance DDR5 6000MHz 32GB - $180</p>
                         </div>
-                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="ram4">
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="ram4" data-category="ram" data-price="240">
                             <img src="img/ram_corsair_32.webp" alt="Corsair Vengeance DDR5 6400MHz 64GB 2x32GB CL32" draggable="true" ondragstart="drag(event)" id="ram4">
-                            <p>Corsair Vengeance DDR5 6400MHz 64GB</p>
+                            <p>Corsair Vengeance DDR5 6400MHz 64GB - $240</p>
                         </div>
                     </div>
                     <h3 class="component-title" onclick="toggleSection('cooler-section')">Refrigeración</h3>
                     <div class="component-options" id="cooler-section">
-                        <div class="component-option">
-                            <img src="path/to/intel-i5.jpg" alt="Intel i5">
-                            <p>Intel i5</p>
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="refri1" data-category="refri" data-price="90">
+                            <img src="img/refri_cooler_argb.webp" alt="Tempest Liquid Cooler 360 ARGB" draggable="true" ondragstart="drag(event)" id="refri1">
+                            <p>Tempest Liquid Cooler 360 ARGB - $90</p>
                         </div>
-                        <div class="component-option">
-                            <img src="path/to/intel-i7.jpg" alt="Intel i7">
-                            <p>Intel i7</p>
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="refri2" data-category="refri" data-price="80">
+                            <img src="img/forgeon_argb.webp" alt="Forgeon Azoth 240 ARGB" draggable="true" ondragstart="drag(event)" id="refri2">
+                            <p>Forgeon Azoth 240 ARGB - $80</p>
                         </div>
-                        <div class="component-option">
-                            <img src="path/to/amd-ryzen-5.jpg" alt="AMD Ryzen 5">
-                            <p>AMD Ryzen 5</p>
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="refri3" data-category="refri" data-price="222">
+                            <img src="img/corsair_argb_360.webp" alt="Corsair iCUE H150i ELITE CAPELLIX 360" draggable="true" ondragstart="drag(event)" id="refri3">
+                            <p>Corsair iCUE H150i ELITE CAPELLIX 360 - $222</p>
                         </div>
-                        <div class="component-option">
-                            <img src="path/to/amd-ryzen-7.jpg" alt="AMD Ryzen 7">
-                            <p>AMD Ryzen 7</p>
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="refri4" data-category="refri" data-price="240">
+                            <img src="img/Corsair_360.webp" alt="Corsair iCUE H150i ELITE LCD XT 360" draggable="true" ondragstart="drag(event)" id="refri4">
+                            <p>Corsair iCUE H150i ELITE LCD XT 360 - $340</p>
                         </div>
                     </div>
                     <h3 class="component-title" onclick="toggleSection('gpu-section')">GPU</h3>
                     <div class="component-options" id="gpu-section">
-                        <div class="component-option">
-                            <img src="path/to/intel-i5.jpg" alt="Intel i5">
-                            <p>Intel i5</p>
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="gpu1" data-category="gpu" data-price="970">
+                            <img src="img/4070_ti.webp" alt="MSI GeForce RTX 4070 Ti" draggable="true" ondragstart="drag(event)" id="gpu1">
+                            <p>MSI GeForce RTX 4070 Ti - $970</p>
                         </div>
-                        <div class="component-option">
-                            <img src="path/to/intel-i7.jpg" alt="Intel i7">
-                            <p>Intel i7</p>
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="gpu2" data-category="gpu" data-price="1179">
+                            <img src="img/4080_super.webp" alt="Zotac Gaming GeForce RTX 4080 SUPER" draggable="true" ondragstart="drag(event)" id="gpu2">
+                            <p>Zotac Gaming GeForce RTX 4080 SUPER - $1179</p>
                         </div>
-                        <div class="component-option">
-                            <img src="path/to/amd-ryzen-5.jpg" alt="AMD Ryzen 5">
-                            <p>AMD Ryzen 5</p>
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="gpu3" data-category="gpu" data-price="1149">
+                            <img src="img/4080.webp" alt="MSI GeForce RTX 4080 SUPER VENTUS" draggable="true" ondragstart="drag(event)" id="gpu3">
+                            <p>MSI GeForce RTX 4080 SUPER VENTUS - $222</p>
                         </div>
-                        <div class="component-option">
-                            <img src="path/to/amd-ryzen-7.jpg" alt="AMD Ryzen 7">
-                            <p>AMD Ryzen 7</p>
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="gpu4" data-category="gpu" data-price="1300">
+                            <img src="img/4090.webp" alt="Gigabyte GeForce RTX 4090" draggable="true" ondragstart="drag(event)" id="gpu4">
+                            <p>Gigabyte GeForce RTX 4090 - $2077</p>
                         </div>
                     </div>
                     <h3 class="component-title" onclick="toggleSection('caja-section')">Caja</h3>
                     <div class="component-options" id="caja-section">
-                        <div class="component-option">
-                            <img src="path/to/intel-i5.jpg" alt="Intel i5">
-                            <p>Intel i5</p>
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="caja1" data-category="caja" data-price="59">
+                            <img src="img/caja_barata.webp" alt="Nfortec Caelum Black RGB" draggable="true" ondragstart="drag(event)" id="caja1">
+                            <p>Nfortec Caelum Black RGB - $51</p>
                         </div>
-                        <div class="component-option">
-                            <img src="path/to/intel-i7.jpg" alt="Intel i7">
-                            <p>Intel i7</p>
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="caja2" data-category="caja" data-price="100">
+                            <img src="img/caja_corsair.webp" alt="Corsair 4000D Airflow Cristal" draggable="true" ondragstart="drag(event)" id="caja2">
+                            <p>Corsair 4000D Airflow Cristal - $105</p>
                         </div>
-                        <div class="component-option">
-                            <img src="path/to/amd-ryzen-5.jpg" alt="AMD Ryzen 5">
-                            <p>AMD Ryzen 5</p>
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="caja3" data-category="caja" data-price="170">
+                            <img src="img/forgeon_white.webp" alt="Forgeon Mithril ARGB" draggable="true" ondragstart="drag(event)" id="caja3">
+                            <p>Forgeon Mithril ARGB - $170</p>
                         </div>
-                        <div class="component-option">
-                            <img src="path/to/amd-ryzen-7.jpg" alt="AMD Ryzen 7">
-                            <p>AMD Ryzen 7</p>
+                        <div class="component-option" draggable="true" ondragstart="drag(event)" id="caja4" data-category="caja" data-price="240">
+                            <img src="img/forgeon_kyber.webp" alt="Forgeon Kyber ARGB" draggable="true" ondragstart="drag(event)" id="caja4">
+                            <p>Forgeon Kyber ARGB - $199</p>
                         </div>
                     </div>
                 </div>
@@ -136,11 +136,12 @@
                 <h2>Carrito</h2>
                 <div id="carrito" ondrop="drop(event)" ondragover="allowDrop(event)" class="cart"></div>
             </div>
-            <div class="right-column">
-                <h2>Precio Total: </h2>
+            <div class="right-column" id="pricediv">
+                <h2>Precio Total: $<span id="totalPrice">0</span></h2>
             </div>
         </div>
     </main>
+    <footer>Curso Frontend de Mastermind - byVila</footer>
     <script src="apps.js"></script>
 </body>
 </html>
