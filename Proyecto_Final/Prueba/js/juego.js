@@ -6,6 +6,9 @@ var avatarImg;
 var numParejas;
 var cartasVolteadas = [];
 var cartasEmparejadas = [];
+var puntuacion = 0;
+var movimientos = 0;
+var movimientosMaximos = 0;
 
 /**
  * Recoge los datos de la sesion del sessionStorage
@@ -78,23 +81,28 @@ function crearTablero(parejas) {
     }
 
     // Ajustar el tamaño del contenedor de acuerdo a la dificultad
+    //Empeze ajustando el case al id correspondiente de la dificultad pero no me cargaba bien, asi que estableci con el numero de cartas.
     let filas, columnas;
     switch (numCartas) {
         case 8: // Fácil
             filas = 2;
             columnas = 4;
+            movimientosMaximos = 8;
             break;
         case 12: // Normal
             filas = 3;
             columnas = 4;
+            movimientosMaximos = 10;
             break;
         case 16: // Difícil
             filas = 4;
             columnas = 4;
+            movimientosMaximos = 15;
             break;
     }
     contenedorJuego.style.gridTemplateColumns = `repeat(${columnas}, 1fr)`;
     contenedorJuego.style.gridTemplateRows = `repeat(${filas}, 1fr)`;
+    document.getElementById('movimientosMaximos').value = movimientosMaximos;
 }
 
 /**
@@ -115,12 +123,19 @@ function voltearCarta() {
  * Función que comprueba si las dos cartas volteadas son pareja
  */
 function comprobarPareja() {
+    realizaMovimiento()
+    if (movimientos == movimientosMaximos) {
+        alert('¡Se ha alcanzado el máximo de movimientos!');
+        document.getElementById('reiniciar').style.display = 'block';
+        return;
+    }
     const [carta1, carta2] = cartasVolteadas;
     if (carta1.dataset.valor === carta2.dataset.valor) {
         cartasEmparejadas.push(carta1, carta2);
         cartasVolteadas = [];
+        recuentoDePuntos();
         if (cartasEmparejadas.length === numParejas * 2) {
-            setTimeout(() => alert('¡Has ganado!'), 500);
+            setTimeout(() => alert('¡Has ganado! ' + 'Tu puntuación es: ' + puntuacion), 500);
         }
     } else {
         setTimeout(() => {
@@ -129,6 +144,23 @@ function comprobarPareja() {
             cartasVolteadas = [];
         }, 1000);
     }
+}
+
+//Funcion que recuenta los puntos
+function recuentoDePuntos(){
+    puntuacion += 10;
+    document.getElementById('puntuacion').value = puntuacion;
+}
+
+//Recuenta los movimientos del usuario (no consigo que encaje cuando el marcador es 0, salta la alerta antes)
+function realizaMovimiento(){
+    movimientosMaximos -= 1;
+    document.getElementById('movimientosMaximos').value = movimientosMaximos;
+}
+
+//Recargar pagina
+function recargarPagina() {
+    location.reload();
 }
 
 // Llamar a las funciones de inicialización cuando el DOM esté completamente cargado

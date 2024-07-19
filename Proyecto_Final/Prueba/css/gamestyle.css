@@ -4,12 +4,15 @@ body {
     background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgb(253, 187, 45) 100%);
     background-repeat: no-repeat;
     font-family: 'Poppins', sans-serif;
-    height: 700px;
+    height: 665px;
     margin: 0px;
 }
 footer {
     text-align: center;
     background-color: rgb(34, 193, 195);
+    margin: 0px;
+    padding: 0px;
+    height: 20px;
 }
 main {
     display: flex;
@@ -68,7 +71,7 @@ p {
 footer {
     font-weight: 600;
 }
-img {
+.itemform img {
     float: left;
     border: 2px solid #1c1c1c;
     padding: 10px;
@@ -107,6 +110,13 @@ img {
     justify-content: center;
     padding: 20px;
     width: 900px;
+}
+#reiniciar {
+    display: none; /* Inicialmente oculto */
+    background-color: #1c1c1c;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .carta {
