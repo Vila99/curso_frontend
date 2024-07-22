@@ -100,12 +100,12 @@ function crearTablero(parejas) {
         case 8: // Fácil
             filas = 2;
             columnas = 4;
-            movimientosMaximos = 8;
+            movimientosMaximos = 10;
             break;
         case 12: // Normal
             filas = 3;
             columnas = 4;
-            movimientosMaximos = 10;
+            movimientosMaximos = 12;
             break;
         case 16: // Difícil
             filas = 4;
