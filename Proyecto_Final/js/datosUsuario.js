@@ -17,7 +17,7 @@ var avatarImg;
  */
 function datosUsuario(nick, tamano, email, avatarCont) {
     sessionStorage.setItem('nick', nick.value);
-    sessionStorage.setItem('tamano', tamano.value);
+    sessionStorage.setItem('dificultad', tamano.value);
     sessionStorage.setItem('email', email.value);
     sessionStorage.setItem('geolocalizacionTxt', geolocalizacionTxt);
     sessionStorage.setItem('avatarImg', avatarCont.src);
@@ -28,7 +28,7 @@ function datosUsuario(nick, tamano, email, avatarCont) {
  */
 function getDatosUsuario() {
     nick = sessionStorage.getItem('nick');
-    tamano = sessionStorage.getItem('tamano');
+    tamano = sessionStorage.getItem('dificultad');
     email = sessionStorage.getItem('email');
     avatarImg = sessionStorage.getItem('avatarImg');
 }
@@ -44,14 +44,25 @@ function comprobacionDatosUsuario() {
     return true;
 }
 
-function almacenarDatosUsuario() {
-    const nick = document.getElementById('nick').value;
-    const tamano = document.getElementById('tamano').value;
-    const email = document.getElementById('email').value;
-    const avatarImg = document.getElementById('avatarImg').src;
+function almacenarDatosUsuario(event) {
+    event.preventDefault(); // Evita el envío del formulario
 
-    sessionStorage.setItem('nick', nick);
-    sessionStorage.setItem('tamano', tamano);
-    sessionStorage.setItem('email', email);
-    sessionStorage.setItem('avatarImg', avatarImg);
+    const nick = document.getElementById("nick").value;
+    const email = document.getElementById("email").value;
+    const dificultad = document.getElementById("dificultad").value;
+    const avatarImg = document.getElementById("avatarImg").src;
+
+    if (nick.length < 2 || dificultad === "0") {
+        document.getElementById("error").innerText = "Por favor, completa los campos obligatorios correctamente.";
+        return false;
+    }
+
+    sessionStorage.setItem("nick", nick);
+    sessionStorage.setItem("email", email);
+    sessionStorage.setItem("dificultad", dificultad);
+    sessionStorage.setItem("avatarImg", avatarImg);
+
+    document.getElementById("formEntrada").submit();
 }
+
+document.getElementById("formEntrada").addEventListener("submit", almacenarDatosUsuario);

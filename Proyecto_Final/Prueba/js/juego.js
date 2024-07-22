@@ -58,10 +58,23 @@ function crearTablero(parejas) {
     const numCartas = parejas * 2;
     const cartas = [];
     
+    //Array de la ruta de imagenes
+    const imagePaths = [
+        './img/avatar_bulma.png',
+        './img/avatar_goku.png',
+        './img/avatar_karin.webp',
+        './img/avatar_pam.webp',
+        './img/avatar_popp.png',
+        './img/avatar_shenron.png',
+        './img/Muten_Roshi.webp',
+        './img/logo__dragon_ball.png',
+    ];
+
+
     // Generar pares de imágenes (temporalmente usando números)
     for (let i = 0; i < parejas; i++) {
-        cartas.push(i);
-        cartas.push(i);
+        cartas.push(imagePaths[i]);
+        cartas.push(imagePaths[i]);
     }
     
     // Mezclar las cartas
@@ -74,7 +87,7 @@ function crearTablero(parejas) {
         carta.dataset.valor = cartas[i];
         carta.innerHTML = `
             <div class="cara frente"></div>
-            <div class="cara atras">${cartas[i]}</div>
+            <div class="cara atras" style="background-image: url('${cartas[i]}'); background-size: cover;"></div>
         `;
         carta.addEventListener('click', voltearCarta);
         contenedorJuego.appendChild(carta);

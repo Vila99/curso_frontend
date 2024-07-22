@@ -14,29 +14,29 @@
 <body>
     <main>
         <div id="contenedorUsuario">
-            <form id="form_entrada" action="juego.html">
+            <form id="form_entrada">
                 <div class="itemform">
                     <img src="./img/Muten_Roshi.webp" width="100" id="avatarImg">
                     <input type="text1" id="nick" value="nick" readonly>
                 </div>
                 <div class="itemform">
-                    <label for="puntuacion">Puntuacion</label>
-                    <input type="text" id="puntuacion" value="0"  class="inputJuego" readonly>
+                    <label for="puntuacion">Puntuación</label>
+                    <input type="text" id="puntuacion" value="0" class="inputJuego" readonly>
                 </div>
                 <div class="itemform">
-                    <label for="tiempo">Tiempo restante</label>
-                    <input type="text" id="tiempo" value="30" class="inputJuego" readonly>
+                    <label for="movimientos">Movimientos restantes</label>
+                    <input type="text" id="movimientosMaximos" value="0" class="inputJuego" readonly>
                 </div>
             </form>
         </div>
         <div id="contenedorJuego">
-            <div id="tituloJuego">
-                <p>Dragon Cards</p>
-            </div>
             <div id="juego">
-                <!-- PINTAR EL PANEL DE JUEGO AUTOMA -->
+                <!-- PINTAR EL PANEL DE JUEGO AUTOMÁTICAMENTE -->
                 <!-- <div class="containerItem"><div class="item"></div></div> -->
             </div>
+        </div>
+        <div id="contenedorReinicio" >
+            <button onclick="recargarPagina()" id="reiniciar">Reiniciar Juego</button>
         </div>
     </main>
     <footer>
@@ -46,6 +46,3 @@
     <script src="./js/juego.js"></script>
 </body>
 </html>
-
-
-

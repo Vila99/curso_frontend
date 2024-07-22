@@ -111,12 +111,26 @@ footer {
     padding: 20px;
     width: 900px;
 }
+#contenedorReinicio {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 #reiniciar {
-    display: none; /* Inicialmente oculto */
+    display: none; /* Initially hidden */
     background-color: #1c1c1c;
     color: #fff;
     border-radius: 5px;
-    padding: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    margin-right: 10px;
+}
+
+#reiniciar:hover {
+    background-color: #333;
 }
 
 .carta {
@@ -141,13 +155,15 @@ footer {
 }
 
 .carta .atras {
-    background: #fff;
+    background-color: #fff;
     color: #000;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2rem;
     transform: rotateY(180deg);
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .carta.revelada .frente {
